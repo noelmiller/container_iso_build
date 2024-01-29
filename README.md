@@ -1,4 +1,4 @@
-# How to Use (This is clunky, probably requires iteration)
+# How to Use
 
 1. Modify the build file to your needs
 2. Modify the install file (for ISOs specifically)
