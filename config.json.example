@@ -1,0 +1,16 @@
+{
+  "blueprint": {
+    "customizations": {
+      "user": [
+        {
+          "name": "noel",
+          "password": "noel",
+          "key": "<YOUR PUBLIC KEY HERE>",
+          "groups": [
+            "wheel"
+          ]
+        }
+      ]
+    }
+  }
+}

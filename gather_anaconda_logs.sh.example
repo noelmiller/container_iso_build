@@ -1,0 +1,11 @@
+## These are commands for helping gather Anaconda logs. It's mostly useful to help me remember how to do it.
+
+# In TMUX Session of Guest (Ctrl+B, C)
+cp /tmp/{anaconda.log,storage.log,program.log,packaging.log,syslog} /mnt/[your-drive-here]
+umount /mnt/[your-drive-here]
+
+# On Host
+guestmount -a disk.qcow2 -m [your-partition-here i.e. /dev/sda] --ro /var/home/noel/guest_mount/
+mkdir -p /var/home/noel/anaconda_logs/
+cp /var/home/noel/guest_mount/{anaconda.log,storage.log,program.log,packaging.log,syslog} /var/home/noel/anaconda_logs/
+tar -czvf anaconda_logs.tar.gz -C /var/home/noel/anaconda_logs .
